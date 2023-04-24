@@ -70,13 +70,8 @@ export const fontsStyle = () => {
 						}
 						
 						fs.appendFile(fontsFile,
-							`@font-face
-								font-family: ${fontName}
-								font-display: swap
-								src: url('../fonts/${fontFileName}.woff2') format('woff2'), url('../fonts/${fontFileName}.woff') format(woff)
-								font-weight: ${fontWeight}
-								font-style: normal
-							`, cb
+							`@font-face\n\tfont-family: ${fontName}\n\tfont-display: swap\n\tsrc: url('../fonts/${fontFileName}.woff2') format('woff2'), url('../fonts/${fontFileName}.woff') format('woff')\n\tfont-weight: ${fontWeight}\n\tfont-style: normal\n\r`, 
+							cb
 						);
 						newFileOnly = fontFileName;
 					}

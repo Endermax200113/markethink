@@ -23,7 +23,7 @@ import { ftp } from './gulp/tasks/ftp.js';
 
 function watcher() {
 	gulp.watch(path.watch.files, gulp.series(reset, copy));
-	gulp.watch(path.watch.pug, gulp.series(reset, html));
+	gulp.watch(path.watch.pug, html);
 	gulp.watch(path.watch.sass, sass);
 	gulp.watch(path.watch.js, js);
 	gulp.watch(path.watch.images, images);
