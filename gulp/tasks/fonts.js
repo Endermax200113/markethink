@@ -34,7 +34,7 @@ export const ttfToWoff = () => {
 }
 
 export const fontsStyle = () => {
-	let fontsFile = `${app.path.srcFolder}/sass/fonts.sass`;
+	let fontsFile = `${app.path.srcFolder}/sass/_fonts.sass`;
 
 	fs.readdir(app.path.build.fonts, (err, fontsFiles) => {
 		if (fontsFiles) {
@@ -77,7 +77,7 @@ export const fontsStyle = () => {
 					}
 				}
 			} else
-				console.log('Файл sass/fonts.sass уже существует. Для обновления файла нужно его удалить!');
+				console.log('Файл sass/_fonts.sass уже существует. Для обновления файла нужно его удалить!');
 		}
 	})
 

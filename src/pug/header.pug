@@ -1,4 +1,31 @@
 header.header
-	.header__background
-		.header__background_circle.header__background_circle_1
-		.header__background_circle.header__background_circle_2
+	.background.header__background
+		.background.background__gradient
+		.background.background__image
+
+		.details
+			.details__circle.details__circle_number_1
+			.details__circle.details__circle_number_2
+			.details__triangle.details__triangle_position_left
+			.details__triangle.details__triangle_position_right
+			.details__cubes.details__cubes_position_left
+			.details__cubes.details__cubes_position_right
+	
+	nav.menu
+		.container.menu__container
+			.menu__collapse.show#navbarSupportedContent
+				a.menu__logo(href="/")
+					.menu__logo-icon
+					.menu__logo-text Markethink
+				
+				ul.menu__list
+					li.menu__item
+						a.menu__link(href="#") Features
+					li.menu__item
+						a.menu__link(href="#") Pricing
+					li.menu__item
+						a.menu__link(href="#") About
+					li.menu__item
+						a.menu__link(href="#") Contact Us
+				
+				button.menu__button(type="button") Free Trial

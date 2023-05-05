@@ -1,24 +1,24 @@
 <svg
-	width="382"
-	height="238"
-	viewBox="0 0 382 238"
+	width="650"
+	height="240"
+	viewBox="0 0 650 240"
 	fill="none"
 	xmlns="http://www.w3.org/2000/svg">
-	<path d="M457.403 0L649 238H0.286621L457.403 0Z" fill="#0E1F17" />
+	<path d="M458.117 0L649.713 238H1L458.117 0Z" fill="#0E1F17" />
 	<path
-		d="M514.087 70.5472L649 238H192.206L514.087 70.5472Z"
+		d="M514.8 70.5472L649.713 238H192.919L514.8 70.5472Z"
 		fill="#09140F" />
 	<path
-		d="M1.5 238L333 64.5"
+		d="M2.21338 238L333.713 64.5"
 		stroke="url(#paint0_linear_301_80)"
 		stroke-width="2"
 		stroke-linecap="square" />
 	<defs>
 		<linearGradient
 			id="paint0_linear_301_80"
-			x1="-142.412"
+			x1="-141.698"
 			y1="-96.8954"
-			x2="372.448"
+			x2="373.162"
 			y2="97.7558"
 			gradientUnits="userSpaceOnUse">
 			<stop stop-color="white" stop-opacity="0.2" />

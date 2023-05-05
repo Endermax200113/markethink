@@ -32,14 +32,11 @@ export const sass = () => {
 				noWebpClass: '.no-webp'
 			})
 		))
-		.pipe(app.plugins.if(
-			app.isBuild,
-			autoPrefixer({
-				grid: true,
-				overrideBrowserslist: ['last 10 versions'],
-				cascade: true
-			})
-		))
+		.pipe(autoPrefixer({
+			grid: true,
+			overrideBrowserslist: ['last 10 versions'],
+			cascade: true
+		}))
 		.pipe(app.plugins.if(
 			app.isBuild,
 			cleanCss()
