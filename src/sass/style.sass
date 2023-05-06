@@ -1,9 +1,12 @@
 @import 'bootstrap'
 @import 'fonts'
 @import 'vars'
-	
+
+body
+	font-family: $font-rubik
+
 .header
-	position: relative
+	@extend .position-relative
 	width: 100%
 	height: 850px
 	background-color: $color-gray
@@ -15,11 +18,12 @@
 		z-index: 1
 
 .background
-	position: absolute
+	@extend .position-absolute
 	width: 100%
 	height: 100%
 
 	&__gradient
+		@extend .background
 		background-image: linear-gradient(149.33deg, #395C4D 0.87%, #132D1F 94.27%)
 		background-size: 1440px 1072px
 
@@ -27,6 +31,7 @@
 			background-size: cover
 	
 	&__image
+		@extend .background
 		background-image: url('@img/background.png')
 		background-repeat: no-repeat
 		background-position: center -80px
@@ -36,13 +41,13 @@
 			background-size: cover
 
 .details
-	position: absolute
+	@extend .position-absolute
 	overflow-x: unset
 	width: 1440px
 	height: 100%
 
 	&__circle, &__triangle, &__cubes
-		position: absolute
+		@extend .position-absolute
 	
 	&__circle
 		&_number
@@ -139,7 +144,6 @@
 			background-repeat: no-repeat
 		
 		&-text
-			font-family: $font-rubik
 			font-weight: 600
 			font-size: 26px
 			line-height: 31px
@@ -164,7 +168,6 @@
 	
 	&__link
 		@extend .nav-link
-		font-family: $font-rubik
 		font-weight: 400
 		font-size: 16px
 		line-height: 19px
@@ -209,3 +212,115 @@
 			color: $color-white
 			outline: none
 			box-shadow: none
+
+.title
+	@extend .text-center
+	font-weight: 700
+	font-size: 42px
+	line-height: 65px
+	letter-spacing: 0.02em
+	color: $color-dark-green
+
+.description
+	font-size: 22px
+	line-height: 40px
+	color: $color-dark-gray
+
+.button
+	@extend .btn
+	@extend .btn-primary
+	padding: 27px 62px
+	border: 0
+	outline: 0
+	background-color: $color-light-green
+	background-image: linear-gradient(328.68deg, #98AA28 13.03%, #D6FF7E 120.61%)
+	box-shadow: 0px 34px 50px rgba(7, 63, 67, 0.07)
+	border-radius: 192px
+	font-weight: 600
+	font-size: 20px
+	line-height: 24px
+	letter-spacing: 0.02em
+	text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25)
+	text-transform: capitalize
+	color: $color-white
+
+	&:active, &:active:focus, &:focus
+		box-shadow: 0px 34px 50px rgba(7, 63, 67, 0.07)
+
+.representation
+	@extend .d-flex
+	@extend .justify-content-center
+	@extend .position-relative
+	margin-top: 85px
+	z-index: 2
+
+	&__container
+		@extend .d-flex
+		@extend .flex-column
+		@extend .align-items-center
+		width: 810px
+		padding: 0
+	
+	&__title
+		color: $color-white
+		margin-bottom: 30px
+
+		&-text
+			&_small
+				@extend .position-relative
+				margin-bottom: 30px
+				font-weight: 500
+				font-size: 36px
+				line-height: 43px
+				letter-spacing: 0.02em
+				text-transform: capitalize
+				opacity: 0.8
+
+				&::before
+					content: ''
+					position: absolute
+					top: 17px
+					width: 60px
+					margin-left: -110px
+					border: 0.5px solid $color-white
+					opacity: 0.4
+
+				&::after
+					content: ''
+					position: absolute
+					top: 17px
+					width: 60px
+					margin-left: 50px
+					border: 0.5px solid $color-white
+					opacity: 0.4
+
+			&_big
+				@extend .position-relative
+				font-weight: 600
+				font-size: 89px
+				line-height: 107px
+				letter-spacing: 0.04em
+
+			&-wave
+				@extend .position-absolute
+				right: 0
+				bottom: 0
+				width: 470px
+				height: 12px
+
+				--size: 10.2px
+				--b: 2px
+				--p: 26.7px
+				--R: calc(28.7px + var(--b) / 2)
+				
+				--_g: #0000 calc(99% - var(--b)), #000 calc(101% - var(--b)) 99%, #0000 101%
+				mask: radial-gradient(var(--R) at left 50% bottom calc(-1 * var(--p)), var(--_g)) calc(50% - 2 * var(--size)) calc(50% - var(--size) / 2 - var(--b) / 2) / calc(4 * var(--size)) calc(var(--size) + var(--b)) repeat-x, radial-gradient(var(--R) at left 50% top calc(-1 * var(--p)), var(--_g)) 50% calc(50% + var(--size) / 2 + var(--b) / 2) / calc(4 * var(--size)) calc(var(--size) + var(--b)) repeat-x
+				background-color: $color-lightest-green
+				opacity: 0.5
+
+	&__description
+		@extend .text-center
+		width: 686px
+		margin-bottom: 70px
+		color: $color-white
+		opacity: 0.6
