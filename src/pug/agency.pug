@@ -1,0 +1,44 @@
+-
+	let items = [
+		{
+			img: "cube",
+			title: "Content Strategy",
+			description: "All our content marketing service packages include a custom content strategy"
+		},
+		{
+			img: "pyramid",
+			title: "Content Development",
+			description: "We create some content calendar for your company’s must-share content"
+		},
+		{
+			img: "ball",
+			title: "Content Creation",
+			description: "Experienced in copywriting and marketing team begins creating content"
+		},
+		{
+			img: "quad",
+			title: "Content Optimization",
+			description: "Your content marketing management services also include SEO"
+		}
+	]
+
+section.agency
+	.container
+		.agency__tell
+			.tell-main
+				h2.title.tell-main__title We&rsquo;re Strategic Digital Marketing Agency
+				p.description.tell-main__description
+					|We&rsquo;ve created a full-stack structure for our working workflow processe, were from the funny the century initial all made, have spare to negatives
+				a.link See more
+					span.link-arrow
+			.tell-content
+				- for (let i = 0; i < 2; i++) 
+					.tell-content__row
+						- for (let j = 0; j < 2; j++)
+							.block
+								div(class="block__img block__img--" + items[(i * 2) + j].img)
+								h3.title.block__title=items[(i * 2) + j].title
+								- if (i == 0 && j == 1)
+									p.description.block__description.block__description--long=items[(i * 2) + j].description
+								- else
+									p.description.block__description.block__description=items[(i * 2) + j].description
