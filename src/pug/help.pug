@@ -1,0 +1,30 @@
+-	
+	let names = [
+		'Update content on my Website',
+		'Improve User Experience',
+		'Request Free Website Review',
+		'Improve your SEO Rankings'
+	]
+
+section.help
+	.container
+		h2.title.help__title How Can We Help You?
+		p.description.help__description Let's do great work together
+		
+		.how
+			hr.how__line(size)
+
+			.how__row
+				- for (let i = 0; i < 4; i++)
+					.block.how__block
+						.block__circle
+							- if (i == 0)
+								.block__circle-mask.block__circle-mask--show
+								.block__circle-img.block__circle-img--show
+							- else
+								.block__circle-mask
+								.block__circle-img
+						- if (i == 0)
+							.block__name.block__name--bold=names[i]
+						- else 
+							.block__name=names[i]

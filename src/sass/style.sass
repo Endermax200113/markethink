@@ -399,10 +399,9 @@ body
 		&--5
 			background-image: url('@img/logo-facebook.svg')
 
-.agency, .business
+.agency
 	padding: 100px 0px
 
-.agency
 	&__tell
 		@extend .row
 	
@@ -430,6 +429,7 @@ body
 
 .block
 	@extend .col
+	padding: 0
 
 	&__img
 		width: 50px
@@ -463,8 +463,61 @@ body
 
 		&--long
 			width: 245px
+	
+	&__circle
+		@extend .position-relative
+		@extend .d-flex
+		@extend .justify-content-center
+		@extend .align-items-center
+		width: 100px
+		height: 100px
+
+		&-mask
+			@extend .position-absolute
+			width: 40px
+			height: 40px
+			padding: 0px 20px
+			box-sizing: content-box
+			background-color: $color-lightest
+			z-index: 3
+
+			&--show
+				width: 100px
+				height: 100px
+				padding: 0px 20px
+				margin: 0
+		
+		&-img
+			width: 40px
+			height: 40px
+			border: 1px solid $color-light-gray
+			border-radius: 50%
+			background-color: $color-white
+			z-index: 4
+
+			&--show
+				width: 100px
+				height: 100px
+				border: 0
+				background-image: url('@img/green-pyramid.svg')
+				background-position: center center
+				background-repeat: no-repeat
+				box-shadow: 0px 20px 30px rgba(118, 153, 115, 0.05)
+	
+	&__name
+		@extend .text-center
+		width: 180px
+		height: 80px
+		margin-top: 25px
+		font-size: 22px
+		line-height: 40px
+		color: $color-dark-green
+
+		&--bold
+			font-weight: 600
 
 .business
+	@extend .agency
 	padding: 20px 0px 120px
 
 	&__container
@@ -490,3 +543,41 @@ body
 	&__description
 		width: 435px
 		margin-bottom: 50px
+
+.help
+	@extend .agency
+	background-color: $color-lightest
+
+	&__title
+		margin-bottom: 30px
+	
+	&__description
+		@extend .text-center
+		margin-bottom: 50px
+
+.how
+	@extend .position-relative
+
+	&__line
+		@extend .position-absolute
+		top: 50px
+		left: 150px
+		right: 150px
+		height: 2px
+		border: 0
+		margin: 0
+		background-image: linear-gradient(to right, $color-light-gray 60%, $color-lightest 50%)
+		background-size: 26px 2px, 100% 2px
+		z-index: 1
+	
+	&__row
+		@extend .position-relative
+		@extend .row
+		width: 100%
+		margin: 0
+		z-index: 2
+	
+	&__block
+		@extend .d-flex
+		@extend .flex-column
+		@extend .align-items-center
