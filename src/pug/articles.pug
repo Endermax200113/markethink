@@ -1,0 +1,38 @@
+-
+	let articles = [
+		{
+			type: 'primary',
+			title: '10 Reasons to invest in SEO copywriting services',
+			description: undefined
+		},
+		{
+			type: 'secondary',
+			title: 'How to get hired at a top Digital Marketing',
+			description: 'Agency life. We’ve all seen the photos posted on social media – the cool...'
+		},
+		{
+			type: 'secondary',
+			title: 'Copywriting guidelines during the coronavirus',
+			description: 'Since the coronavirus hit earlier this year, it’s hard to go anywhere...'
+		}
+	]
+
+section.articles
+	.container
+		.articles-top
+			h2.title.articles-top__title Read More Articles From Our Blog
+			.articles-top__content
+				.articles-top__text.articles-top__text--show Content Writing
+				.articles-top__text Content Marketing
+		
+		.articles-bottom
+			- for (let i = 1; i <= 3; i++)
+				article.article(class="article--" + articles[i - 1].type)
+					div.article__img(class="article__img-" + articles[i - 1].type + " article__img--" + i)
+					time.article__date(class="article__date--" + articles[i - 1].type, datetime="2021-08-17") August 17, 2021
+					h3.title.article__title(class="article__title--" + articles[i - 1].type)=articles[i - 1].title
+					- if (articles[i - 1].description !== undefined)
+						p.description.article__description=articles[i - 1].description
+						button.button.article__button.article__button--secondary
+					- else
+						button.button.article__button.article__button--primary Read more

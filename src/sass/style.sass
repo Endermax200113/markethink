@@ -554,9 +554,15 @@ body
 	&__description
 		@extend .text-center
 		margin-bottom: 50px
+	
+	&__link
+		width: max-content
+		margin: 0 auto
+		
 
 .how
 	@extend .position-relative
+	margin-bottom: 60px
 
 	&__line:not([size])
 		@extend .position-absolute
@@ -581,3 +587,168 @@ body
 		@extend .d-flex
 		@extend .flex-column
 		@extend .align-items-center
+
+.articles
+	@extend .agency
+	padding: 120px 0px 60px
+
+	&-top
+		@extend .d-flex
+		@extend .justify-content-between
+		@extend .align-items-end
+		margin-bottom: 60px
+
+		&__title
+			width: 490px
+			text-align: left !important
+		
+		&__content
+			@extend .d-flex
+			height: 40px
+		
+		&__text
+			margin-left: 70px
+			font-size: 24px
+			line-height: 28px
+			letter-spacing: 0.02em
+			color: $color-darkest-gray
+			opacity: 0.9
+			cursor: pointer
+
+			&:first-child
+				margin-left: 0px
+			
+			&--show
+				position: relative
+				color: $color-dark-green
+
+				&::after
+					position: absolute
+					content: ''
+					bottom: 0px
+					left: 50%
+					width: 105px
+					height: 3px
+					background-color: $color-dim-green
+					transform: translateX(-50%)
+	
+	&-bottom
+		@extend .row
+		margin: 0
+
+.article
+	padding: 0px 20px
+	box-sizing: content-box
+
+	&:first-child
+		padding-left: 0px
+	
+	&:last-child
+		padding-right: 0px
+
+	&--primary
+		@extend .col-6
+		width: 540px
+		padding-right: 30px
+	
+	&--secondary
+		@extend .col-3
+		width: 270px
+	
+	&__img
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: center center
+		margin-bottom: 25px
+
+		&-primary
+			width: 540px
+			height: 343px
+		
+		&-secondary
+			width: 270px
+			height: 245px
+		
+		&--1
+			background-image: url('@img/main-article.png')
+		
+		&--2
+			background-image: url('@img/first-article.png')
+		
+		&--3
+			background-image: url('@img/second-article.png')
+	
+	&__date
+		letter-spacing: 0.02em
+		color: $color-darkest-gray
+
+		&--primary
+			font-size: 18px
+			line-height: 21px
+		
+		&--secondary
+			font-size: 14px
+			line-height: 17px
+	
+	&__title
+		font-weight: 500
+		text-align: left !important
+		line-height: 36px
+
+		&--primary
+			margin-top: 15px
+			margin-bottom: 40px
+			font-size: 26px
+		
+		&--secondary
+			margin-top: 12px
+			margin-bottom: 16px
+			font-size: 23px
+	
+	&__description
+		font-size: 18px
+		line-height: 30px
+		margin-bottom: 40px
+	
+	&__button
+		border: 1px solid $color-green
+		border-radius: 192px
+		box-sizing: content-box
+		background-color: $color-white
+		background-image: none
+		filter: drop-shadow(0px 34px 50px rgba(7, 63, 67, 0.07))
+		text-transform: capitalize
+		color: $color-dim-green
+
+		&:active, &:active:focus
+			border: 1px solid $color-green
+			background-color: $color-lightest-green
+			color: $color-dim-green
+		
+		&:focus, &:hover
+			border: 1px solid $color-green
+			background-color: $color-white
+			color: $color-dim-green
+
+		&--primary
+			padding: 22px 50px
+
+			&:active, &:active:focus
+				background-image: none
+			
+			&:focus, &:hover
+				background-image: none
+		
+		&--secondary
+			width: 30px
+			height: 30px
+			padding: 19px
+			background-image: url('@img/eye.svg')
+			background-position: center center
+			background-repeat: no-repeat
+
+			&:active, &:active:focus
+				background-image: url('@img/eye.svg')
+
+			&:focus, &:hover
+				background-image: url('@img/eye.svg')
