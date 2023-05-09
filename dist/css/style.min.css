@@ -7065,7 +7065,7 @@ fieldset:disabled .btn, fieldset:disabled .button, fieldset:disabled .menu__butt
   position: relative !important;
 }
 
-.position-absolute, .how__line, .block__circle-mask, .representation__title-text-wave, .details__circle, .details__triangle, .details__cubes, .details, .background, .background__image, .background__gradient {
+.position-absolute, .how__line:not([size]), .block__circle-mask, .representation__title-text-wave, .details__circle, .details__triangle, .details__cubes, .details, .background, .background__image, .background__gradient {
   position: absolute !important;
 }
 
@@ -11751,7 +11751,7 @@ body {
   margin-bottom: 50px;
 }
 
-.how__line {
+.how__line:not([size]) {
   top: 50px;
   left: 150px;
   right: 150px;
