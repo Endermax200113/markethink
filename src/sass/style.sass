@@ -5,6 +5,10 @@
 body
 	font-family: $font-rubik
 
+::selection
+	background-color: $color-dim-green
+	color: $color-white
+
 .header
 	@extend .position-relative
 	width: 100%
@@ -852,3 +856,128 @@ body
 	
 	&__button
 		padding: 27px 70px
+
+.footer
+	padding: 50px 0px 65px
+
+	&-nav
+		@extend .row
+		@extend .justify-content-end
+		margin: 0
+		margin-bottom: 65px
+	
+	&-col
+		@extend .col
+		padding: 0
+		margin-left: 60px
+
+		&--1
+			@extend .col-5
+			@extend .align-self-start
+			width: 354px
+			flex-basis: 354px
+			margin-left: 0px
+		
+		&--2
+			@extend .col-2
+			width: 117px
+			flex-basis: 117px
+			margin-left: 172px
+		
+		&--3
+			@extend .col-3
+			width: 232px
+			flex-basis: 232px
+
+		&--4
+			@extend .col-2
+			width: 175px
+			flex-basis: 175px
+		
+		&__logo
+			@extend .d-flex
+			@extend .align-items-center
+			text-decoration-line: none
+			margin-bottom: 40px
+
+			&-icon
+				width: 32px
+				height: 32px
+				margin-right: 10px
+				background-image: url('@img/dark-logo.svg')
+				background-repeat: no-repeat
+			
+			&-text
+				font-weight: 600
+				font-size: 26px
+				line-height: 31px
+				letter-spacing: 0.02em
+				color: $color-dark-green
+		
+		&__description
+			margin-bottom: 30px
+			font-size: 20px
+			line-height: 34px
+			letter-spacing: 0.01em
+		
+		&__social
+			@extend .d-flex
+
+			&-link
+				width: 40px
+				height: 40px
+				margin-right: 24px
+				background-repeat: no-repeat
+
+				&:last-child
+					margin-right: 0px
+				
+				&--facebook
+					background-image: url('@img/soc-icon-facebook.svg')
+				
+				&--twitter
+					background-image: url('@img/soc-icon-twitter.svg')
+				
+				&--instagram
+					background-image: url('@img/soc-icon-instagram.svg')
+
+		&__title
+			@extend .d-block
+			margin-bottom: 38px
+			font-weight: 700
+			font-size: 24px
+			line-height: 34px
+			color: $color-dark-green
+
+	&-list
+		list-style: none
+		margin: 0
+		padding: 0
+
+		&__item
+			font-size: 16px
+			line-height: 34px
+		
+		&__link
+			text-decoration-line: none
+			color: $color-dark-gray
+
+			&:hover
+				color: $color-black
+	
+	&-end
+		@extend .d-flex
+		@extend .flex-column
+		@extend .align-items-center
+
+		&__line:not([size])
+			width: 100%
+			margin: 0
+			margin-bottom: 30px
+			border: 0.5px solid rgba(20, 24, 62, 0.15)
+		
+		&__copyright
+			font-size: 16px
+			line-height: 34px
+			color: $color-dark-gray
+			margin: 0

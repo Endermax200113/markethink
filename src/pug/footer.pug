@@ -1,1 +1,46 @@
-footer 
+-
+	let footer = [
+		{
+			title: 'markethink',
+			links: []
+		},
+		{
+			title: 'Menu',
+			links: ['Home', 'Features', 'Pricing About', 'Contact Us']
+		},
+		{
+			title: 'Sevices',
+			links: ['Content Strategy', 'Content Development', 'Content Creation', 'Content Optimazion']
+		},
+		{
+			title: 'Company',
+			links: ['Site Map', 'Terms of Use', 'Privacy Notice', 'Cookies', 'Modern Slavery']
+		}
+	]
+
+footer.footer
+	.container
+		.footer-nav
+			- for (let i = 0; i < 4; i++)
+				.footer-col(class="footer-col--" + (i + 1))
+					- if (i === 0)
+						a.footer-col__logo(href="/")
+							.footer-col__logo-icon
+							.footer-col__logo-text=footer[i].title
+						p.description.footer-col__description
+							|Marketing is a company that focus on developing company’s strategy for increase digital marketing
+						.footer-col__social
+							a.footer-col__social-link.footer-col__social-link--facebook(href="#")
+							a.footer-col__social-link.footer-col__social-link--twitter(href="#")
+							a.footer-col__social-link.footer-col__social-link--instagram(href="#")
+					- else
+						b.footer-col__title=footer[i].title
+
+						ul.footer-list
+							each item in footer[i].links
+								li.footer-list__item
+									a.footer-list__link(href="#")=item
+		
+		.footer-end
+			hr.footer-end__line
+			p.footer-end__copyright &copy; Copyright Markethink. All right reserved
