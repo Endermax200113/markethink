@@ -46,7 +46,7 @@ body
 	width: 1440px
 	height: 100%
 
-	&__circle, &__triangle, &__cubes
+	&__circle, &__triangle, &__cubes, &__cubes-subscription
 		@extend .position-absolute
 	
 	&__circle
@@ -105,6 +105,25 @@ body
 			overflow-y: hidden
 			background-image: url('@img/right-cubes-header.svg')
 			background-repeat: no-repeat
+		
+		&-subscription
+			&--left
+				top: 0px
+				left: 0px
+				width: 108.26px
+				height: 219.66px
+				background-image: url('@img/left-cubes-contact.svg')
+				background-position: -109px -46px
+				background-repeat: no-repeat
+			
+			&--right
+				bottom: -27px
+				right: -106px
+				width: 401.54px
+				height: 491px
+				background-image: url('@img/right-cubes-contact.svg')
+				background-repeat: no-repeat
+
 
 .container
 	max-width: 1170px
@@ -752,3 +771,84 @@ body
 
 			&:focus, &:hover
 				background-image: url('@img/eye.svg')
+
+.subscription
+	@extend .agency
+	height: 525px
+	padding: 60px 0px 50px
+	box-sizing: content-box
+	overflow-x: hidden
+
+	&__container
+		@extend .position-relative
+		@extend .d-flex
+		@extend .align-items-center
+		height: 100%
+	
+	&__gradient
+		background-size: 1170px 542px
+	
+	&__image
+		background-size: 1170px 525px
+		background-position: center 0
+	
+	&__details
+		width: 100%
+
+.contact
+	width: 660px
+	flex-basis: 660px
+	margin-left: 130px
+	z-index: 2
+
+	&__request
+		margin-bottom: 30px
+		font-weight: 600
+		font-size: 32px
+		line-height: 55px
+		letter-spacing: 0.01em
+		color: $color-white
+	
+	&__logo
+		@extend .d-flex
+		@extend .align-items-center
+		margin-bottom: 62px
+
+		&-icon
+			width: 42px
+			height: 42px
+			margin-right: 13px
+			background-image: url('@img/logo-large.svg')
+			background-repeat: no-repeat
+
+		&-text
+			font-weight: 600
+			font-size: 35px
+			line-height: 42px
+			letter-spacing: 0.02em
+			color: $color-white
+
+.form
+	&__line
+		@extend .d-flex
+	
+	&__email
+		width: 372px
+		padding: 28px 40px 29px
+		margin-right: 30px
+		outline: 0
+		border: 0
+		border-radius: 192px
+		background-image: linear-gradient(332.09deg, #FFFFFF 3.37%, #E2E2E2 132.9%)
+		box-shadow: 0px 34px 50px rgba(7, 63, 67, 0.07)
+		font-weight: 500
+		font-size: 18px
+		line-height: 21px
+		letter-spacing: 0.02em
+		color: $color-darkest-blue
+
+		&::placeholder
+			color: $color-darkest-blue
+	
+	&__button
+		padding: 27px 70px
